@@ -18,8 +18,8 @@ class PostFactory extends Factory
     {
         return [
             'image'     => fake()->imageUrl($width = 640, $height = 480),
-            'title'     => fake()->text(10),
-            'content'   => fake()->text(),
+            'title'     => fake()->sentence(),
+            'content'   => fake()->paragraph(),
         ];
     }
 }
