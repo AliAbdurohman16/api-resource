@@ -13,17 +13,17 @@ class PostTest extends TestCase
     use DatabaseMigrations;
 
     /** @test */
-    // public function read_all_post()
-    // {
-    //     // Given we have post in the database
-    //     $post = Post::factory()->create();
+    public function read_all_post()
+    {
+        // Given we have post in the database
+        $post = Post::factory()->create();
 
-    //     // when visit the posts URI
-    //     $response = $this->get('api/posts');
+        // when visit the posts URI
+        $response = $this->get('api/posts');
 
-    //     // He should be able to read the post
-    //     $response->assertSee($post->title);
-    // }
+        // He should be able to read the post
+        $response->assertSee($post->title);
+    }
 
     public function insert_post()
     {
